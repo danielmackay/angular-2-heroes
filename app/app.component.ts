@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
-import {OnInit} from 'angular2/core';
+import {Component} from '@angular/core';
+import {OnInit} from '@angular/core';
+
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
 import {HeroDetailComponent} from './hero-detail.component';
@@ -13,7 +14,7 @@ import {HeroDetailComponent} from './hero-detail.component';
         
         <h2>My Heroes</h2>
         <ul class="heroes">
-        <li *ngFor="#hero of heros" 
+        <li *ngFor="let hero of heros" 
             [class.selected]="hero === selectedHero"
             (click)="onSelect(hero)">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
