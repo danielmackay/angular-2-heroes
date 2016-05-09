@@ -2,15 +2,15 @@ import {Component} from '@angular/core';
 import {OnInit} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
 
-import {Hero} from './hero';
-import {HeroService} from './hero.service';
-import {HeroDetailComponent} from './hero-detail.component';
+import {Hero} from '../models/hero';
+import {HeroService} from '../services/hero.service';
+import {HeroDetailComponent} from '../hero-detail/hero-detail.component';
 
 @Component({
     selector: 'my-heroes',
     directives: [HeroDetailComponent],
-    templateUrl: 'app/heroes.component.html',
-    styleUrls:  ['app/heroes.component.css'],
+    templateUrl: 'app/heroes/heroes.component.html',
+    styleUrls:  ['app/heroes/heroes.component.css'],
 })
 export class HeroesComponent implements OnInit{
     selectedHero: Hero;
